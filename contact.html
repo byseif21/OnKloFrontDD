@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OM</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>مـ </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" id="login-icon"><i class="fas fa-user"></i></a>
+        </nav>
+    </header>
+
+    <main> <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us via the form below.</p>
+
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <!-- Cart -->
+    <div id="cart" class="cart">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-body">
+            <p>No items in cart.</p>
+        </div>
+        <div class="cart-Buy">
+            <a href="checkout.html" class="cta-button">Pay now!</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 مـ . All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

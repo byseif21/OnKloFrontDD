@@ -1,0 +1,852 @@
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    /* Flexbox layout for body */
+    flex-direction: column;
+    /* Stacks children vertically */
+    min-height: 100vh;
+    /* Ensures full viewport height */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    /* To fill space between header and footer */
+    padding: 20px;
+    /* Adds spacing for content */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Header Styling (Optional) */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    animation: fadeInDown 1s ease;
+    transition: all 0.3s ease;
+    /* Added 's' for seconds */
+}
+
+header.scrolled {
+    padding: 10px;
+    text-align: center;
+    /* Center the header contents when scrolled */
+    background-color: #f8f8f8;
+    /* Optional: Change background color when scrolled */
+    border-bottom: 2px solid #ccc;
+    /* Optional: Add a thicker border for clarity */
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+    /* Added 's' for seconds */
+}
+
+header.scrolled h1 {
+    font-size: 24px;
+    transform: translateY(-5px);
+}
+
+nav {
+    margin-top: 10px;
+    display: block !important;
+    justify-content: center;
+    /* Center the nav links */
+    gap: 15px;
+    /* Add spacing between nav links */
+    transition: margin-top 0.3s ease;
+    /* Correct syntax */
+}
+
+header.scrolled nav {
+    margin-top: 0;
+    gap: 10px;
+    /* Reduce spacing between links on scroll */
+    transform: translateY(-5px);
+    /* Corrected the syntax error */
+}
+
+#cart-icon {
+    display: inline-block;
+    font-size: 20px;
+    color: #333;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    /* Added 's' for seconds */
+}
+
+header.scrolled #cart-icon {
+    font-size: 18px;
+    /* Optional: Reduce size of cart icon */
+    margin-left: 0;
+    /* Optional: Align it tighter with nav */
+    transform: translateY(-5px);
+}
+
+/* Optional: Center nav and cart when scrolled */
+header.scrolled nav,
+header.scrolled #cart-icon {
+    transform: translateY(-10px);
+    /* Ensures both nav and cart move together */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e979d6;
+    transition: color 0.3s ease;
+    /* Added 's' for seconds */
+}
+
+header.scrolled nav a {
+    font-size: 18px;
+    /* Reduce link size on scroll */
+}
+
+.section,
+.about-section,
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2,
+.about-section h2,
+.contact-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+.section p,
+.about-section p,
+.contact-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+    animation: fadeInUp 2s ease;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff6347;
+}
+
+.checkout-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+    animation: fadeInUp 2s ease;
+}
+
+.checkout-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.checkout-form button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form button:hover {
+    background-color: #ff6347;
+}
+
+#cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url('pexels-photo-3418742.jpeg');
+    height: 200vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e979d6;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 4s ease;
+}
+
+.hero-content {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e979d6;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+.products,
+.shop-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.product,
+.shop-product {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img,
+.shop-product img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product h3,
+.shop-product h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product p,
+.shop-product p {
+    font-size: 16px;
+    color: #777;
+}
+
+.product:hover,
+.shop-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img:hover,
+.shop-product img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cart Styles */
+#cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+#cart.open {
+    transform: translateX(0);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-body {
+    padding: 20px;
+}
+
+.cart-body p {
+    font-size: 18px;
+    color: #555;
+}
+
+.cart-Buy {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Container for shop section */
+.shop-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Sidebar styling */
+.shop-sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.shop-sidebar-expanded {
+    width: 40%;
+}
+
+/* Styling for category links */
+.shop-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shop-categories ul li {
+    margin-bottom: 10px;
+}
+
+.shop-categories ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.shop-categories ul li a:hover {
+    color: #e979d6;
+}
+
+/* Styling for price filter */
+.shop-filter {
+    margin-top: 30px;
+}
+
+.shop-filter label {
+    font-size: 14px;
+    color: #333;
+}
+
+.shop-filter input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* New Scroll-triggered Animation */
+.scroll-trigger {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-trigger.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Login*/
+
+.login-form span {
+    font-family: 'Dancing Script', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    color: #e979d6;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    background: #ede1eb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 30px auto 0;
+    text-align: left;
+    animation: fadeInUp 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-form input,
+.login-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    height: 50px;
+}
+
+.form-group {
+    width: 85%;
+    margin-bottom: 0px;
+    display: inline-block;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.login-form button:hover {
+    background-color: #ff6347;
+}
+
+/* Sign Up Section */
+
+.signup-form span {
+    font-family: 'Dancing Script', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    color: #e979d6;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    background: #ede1eb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+    animation: fadeInUp 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    height: 50px;
+}
+
+.signup-form button {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.signup-form button:hover {
+    background-color: #ff6347;
+
+}
+
+.text {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: #333;
+    display: block;
+    text-align: center;
+}
+
+
+/* General Shop Section Styling */
+.shop-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.shop-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Shop Controls: Search & Sorting */
+.shop-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+/* Search Bar */
+.search-bar-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sort Dropdown */
+.sort-options-container {
+    flex: 1;
+    max-width: 200px;
+}
+
+#sort-options {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999" width="18px" height="18px"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center;
+    background-size: 18px;
+}
+
+#sort-options:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility: Hide Labels */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Reset Password Section */
+.resetPassword-section {
+    background: #ede1eb;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 50px auto 0;
+    text-align: center;
+    animation: fadeInUp 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.resetPassword-section h2 {
+    font-family: 'Dancing Script', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    color: #e979d6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.RPform-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.RPform-group p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.RPform-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.RPform-group input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    height: 50px;
+}
+
+.btn-reset {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+    background-color: #ff6347;
+}
+
+.aa p {
+    margin-top: 20px;
+}
+
+.aa a {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.aa a:hover {
+    color: #ff6347;
+}

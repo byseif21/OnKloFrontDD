@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a></li>
+            <a href="contact.html">Contact</a></li>
+            <a href="login.html" id="login-icon"><i class="fas fa-user"></i></a>
+        </nav>
+    </header>
+
+    <section class="checkout-form">
+        <h1>Checkout</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <!-- More payment options -->
+            </select>
+
+            <button type="submit" class="btn">Complete Purchase</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 مـ . All rights reserved.</p>
+        <a href="contact.html">Contact Us</a></li>
+        <a href="privacy-policy.html">Privacy Policy</a></li>
+        <a href="terms-of-service.html">Terms of Service</a></li>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
