@@ -56,7 +56,8 @@ header.scrolled {
 header.scrolled {
     align-self: center;
     width: 80%;
-    top: 5px;
+    min-width: 300px;
+    top: 5px !important;
     border-radius: 40px;
     padding: 6px;
     text-align: center;
@@ -300,6 +301,11 @@ header.scrolled nav a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    header.scrolled nav a{
+        font-size:15px
+    }
+
     .footer-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -576,14 +582,27 @@ header.scrolled nav a {
 }
 
 @media (max-width: 480px) {
+
+    #cart-icon {
+        font-size: 19px;
+    }
+
+    header.scrolled {
+        min-width: 270px !important;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    header.scrolled nav a{
+        font-size:11px
+    }
+
     .hero {
         height: 90vh;
     }
-
     .hero h2 {
         font-size: 28px;
     }
-
     .hero p {
         font-size: 14px;
     }
